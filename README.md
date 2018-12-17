@@ -75,4 +75,4 @@ Property | Default | Description
 ```
 
 ## How It looks:
-
+![](https://media.giphy.com/media/sRK9EUQpMgGTsQAXnn/giphy.gif)
