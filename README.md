@@ -76,3 +76,7 @@ Property | Default | Description
 
 ## How It looks:
 ![](https://media.giphy.com/media/sRK9EUQpMgGTsQAXnn/giphy.gif)
+
+
+## Installation:
+`npm i @johankladder/react-native-collapsible-header-components`
