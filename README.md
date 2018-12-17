@@ -28,7 +28,7 @@ Property | Default | Description
 ---------|---------|------------
 `collapsibleHeaderHeight` | Required | The height of the header. (integer) 
 `collapsibleHeader` | Required | The actual header component (React.Component)
-`statusBarHeight` | 0 | The height that the logic should always remain. So when given 100, the bottom 100 pixels is always visible. (integer)
+`statusBarHeight` | 0 | The height that the logic should always remain. So when given 100, the lower 100 pixels is always visible. (integer)
 
 
 ## Example code:
@@ -80,5 +80,8 @@ Property | Default | Description
 
 
 ## Installation:
-`npm i @johankladder/react-native-collapsible-header-components` & 
-`yarn add @johankladder/react-native-collapsible-header-components`
+- `npm i @johankladder/react-native-collapsible-header-components`  
+- `yarn add @johankladder/react-native-collapsible-header-components`
+
+## Contribution:
+Feel free to contribute and open pull-requests!
