@@ -1,11 +1,8 @@
 {
   "name": "@johankladder/react-native-collapsible-header-components",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "A React Native package that contains the sources for Collapsible Header Components",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johankladder/react-native-collapsible-header-components"

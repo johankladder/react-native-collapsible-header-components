@@ -4,15 +4,18 @@ import CollapsibleView from "./CollapsibleView";
 
 const AnimatedScrollView = Animated.createAnimatedComponent(ScrollView);
 
-
+/**
+ * A ScrollView Components that can have a Collapsible Header.
+ *
+ * @author Johan Kladder
+ */
 export default class CollapsibleScrollView extends CollapsibleView {
 
     render() {
         return (
             <View>
                 <AnimatedScrollView
-                    {...this.props}
-                    {...this._getCollapsibleViewProps()}
+                    {...this._getViewProps()}
                 >
                     {this.props.children}
                 </AnimatedScrollView>

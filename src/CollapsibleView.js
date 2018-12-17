@@ -1,11 +1,29 @@
 import React from 'react';
 import {Animated, StyleSheet} from "react-native";
 
+/**
+ * An collapsible view is a view that is scrollable but has a header. This header needs to move 'up' when scrolling
+ * down an move 'down' when scrolling up. It is also capable of keeping a status bar of a given height. The status bar
+ * is then always shown and never hidden (also not when scrolling down).
+ *
+ * The logic in this component is gathered from various (open) sources.
+ *
+ * @author Johan Kladder
+ */
 export default class CollapsibleView extends React.Component {
 
 
     state = {
         scrollY: new Animated.Value(0),
+    };
+
+    _getViewProps = () => {
+        let props = {};
+
+        Object.assign(props, this.props);
+        Object.assign(props, this._getCollapsibleViewProps());
+
+        return props;
     };
 
     _interpolateHeaderHeight = () => {
@@ -26,26 +44,11 @@ export default class CollapsibleView extends React.Component {
             });
     };
 
-    /**
-     * Retrieves the statusBarHeight that was given. When none was given, it will return 0, so it can always
-     * be calculated.
-     *
-     * @return {number}
-     * @private
-     */
     _getStatusBarHeight = () => {
         let {statusBarHeight} = this.props;
         return statusBarHeight ? statusBarHeight : 0;
     };
 
-    /**
-     * Returns the headerStyle that needs to be used for the header to perform according to the animations.
-     *
-     * @param defaultHeaderHeight
-     * @param interpolatedHeaderTranslation
-     * @return {*[]}
-     * @private
-     */
     _getHeaderStyle = (defaultHeaderHeight, interpolatedHeaderTranslation) => {
         return [
             styles.defaultHeaderStyle,
@@ -77,12 +80,6 @@ export default class CollapsibleView extends React.Component {
 
     };
 
-    /**
-     * Returns a object container the styles of a scrollView that is capable of performing collapsible actions.
-     *
-     * @return {{contentContainerStyle: {_: {paddingTop: *}}, scrollEventThrottle: number, onScroll: *}}
-     * @private
-     */
     _getCollapsibleViewProps = () => {
         let {collapsibleHeaderHeight} = this.props;
 
