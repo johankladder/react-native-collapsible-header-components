@@ -1,7 +1,7 @@
 # react-native-collapsible-header-components
 
 This package contains a `<CollapsibleScrollView/>` and a 
-`<CollapsableFlatList/>` component. These components can be used as 
+`<CollapsibleFlatList/>` component. These components can be used as 
 a 'normal' ScrollView/FlatList, but can have collapsible headers. 
 
 ## What are 'collapsible headers' ?
@@ -9,25 +9,26 @@ a 'normal' ScrollView/FlatList, but can have collapsible headers.
 Collapsible headers are bars that are in top of scroll-views. 
 Most of the time these bars contain controllers, like: a channel 
 selector or a search-bar. The point is, they make up space on the top space 
-of a view.
+of a view and should collapse when the user scrolls down.
 
 ## When do I need 'collapsible headers' ?
 
 Collapsible headers can be used when your header takes up a lot 
-of space of the UI. With a collapsible header it is possible to automatically 
+of space in the UI. With a collapsible header it is possible to automatically 
 remove the header when scrolling down and show it again when scrolling 
 up.
 
 ## Additional properties of the 'scroll-views'.
 
-Both the `<CollapsibleScrollView/>` and the `<CollapsableFlatList/>` 
-contain the following additional props:
+Both the `<CollapsibleScrollView/>` and the `<CollapsibleFlatList/>` 
+contain the following additional props (next to the default props of the given 
+component):
 
 Property | Default | Description
 ---------|---------|------------
 `collapsibleHeaderHeight` | Required | The height of the header. (integer) 
 `collapsibleHeader` | Required | The actual header component (React.Component)
-`statusBarHeight` | 0 | The height that the logic should always remain. So when given 100, the bottom 100 pixels is always visible
+`statusBarHeight` | 0 | The height that the logic should always remain. So when given 100, the bottom 100 pixels is always visible. (integer)
 
 
 ## Example code:
@@ -79,4 +80,5 @@ Property | Default | Description
 
 
 ## Installation:
-`npm i @johankladder/react-native-collapsible-header-components`
+`npm i @johankladder/react-native-collapsible-header-components` & 
+`yarn add @johankladder/react-native-collapsible-header-components`
