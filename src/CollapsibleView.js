@@ -73,7 +73,9 @@ export default class CollapsibleView extends React.Component {
         let {collapsibleHeaderHeight, collapsibleHeader} = this.props;
 
         if(!collapsibleHeader.hasOwnProperty('prototype')) {
-            collapsibleHeader = collapsibleHeader.apply(collapsibleHeader)
+            if(collapsibleHeader.apply) {
+                collapsibleHeader = collapsibleHeader.apply(collapsibleHeader)
+            }
         }
 
         return (
