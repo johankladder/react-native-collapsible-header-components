@@ -72,6 +72,10 @@ export default class CollapsibleView extends React.Component {
 
         let {collapsibleHeaderHeight, collapsibleHeader} = this.props;
 
+        if(!collapsibleHeader.hasOwnProperty('prototype')) {
+            collapsibleHeader = collapsibleHeader.apply(collapsibleHeader)
+        }
+
         return (
             <Animated.View
                 style={this._getHeaderStyle(collapsibleHeaderHeight, interpolatedHeaderTranslation)}>
