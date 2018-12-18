@@ -22,6 +22,7 @@ export default class CollapsibleView extends React.Component {
 
         Object.assign(props, this.props);
         Object.assign(props, this._getCollapsibleViewProps());
+        Object.assign(props, {ref: c => (this.reference = c)});
 
         return props;
     };

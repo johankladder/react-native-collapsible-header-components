@@ -40,6 +40,7 @@ Property | Default | Description
     renderCollapsibleScrollView = () => {
         return (
             <CollapsibleScrollView
+                ref={ref => this.collapsibleScrollView = ref}
                 collapsibleHeader={this.renderHeaderWithMarkers()}
                 collapsibleHeaderHeight={225}
                 statusBarHeight={75}
@@ -74,6 +75,15 @@ Property | Default | Description
     
     [...]
 ```
+
+_To access to reference of the actual inner ScrollView (for performing scroll actions 
+on the component), you can reference it in the above shown way. But you need to access the 
+inner ref by calling_: 
+
+`this.collapsableScrollView.reference.getNode().scrollToEnd()` where `scrollToEnd()` can be any supported 
+function you would like to use.
+
+
 
 ## How It looks:
 ![](https://media.giphy.com/media/sRK9EUQpMgGTsQAXnn/giphy.gif)
