@@ -1,5 +1,7 @@
 # react-native-collapsible-header-components
 
+https://www.npmjs.com/package/@johankladder/react-native-collapsible-header-components
+
 This package contains a `<CollapsibleScrollView/>` and a 
 `<CollapsibleFlatList/>` component. These components can be used as 
 a 'normal' ScrollView/FlatList, but can have collapsible headers. 
