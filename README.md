@@ -95,7 +95,8 @@ function you would like to use.
 
 ## Known bugs:
 - Currently the RefreshControl of iOS is not visible. This is because a 
-offset can not be set.
+offset can not be set. On iOS make sure you set the `progressViewOffset` property
+according to you need. Most of the time I set it to the height of the header.
 
 ## Contribution:
 Feel free to contribute and open pull-requests!
