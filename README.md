@@ -93,5 +93,9 @@ function you would like to use.
 - `npm i @johankladder/react-native-collapsible-header-components`  
 - `yarn add @johankladder/react-native-collapsible-header-components`
 
+## Known bugs:
+- Currently the RefreshControl of iOS is not visible. This is because a 
+offset can not be set.
+
 ## Contribution:
 Feel free to contribute and open pull-requests!
