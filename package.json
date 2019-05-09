@@ -1,6 +1,6 @@
 {
   "name": "@johankladder/react-native-collapsible-header-components",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "keywords": ["react-native", "collapsible", "headers", "scrollview", "flatlist"],
   "description": "A React Native package that contains the sources for Collapsible Header Components",
   "main": "index.js",
