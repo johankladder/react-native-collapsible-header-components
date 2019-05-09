@@ -88,7 +88,7 @@ export default class CollapsibleView extends React.Component {
     };
 
     _getCollapsibleViewProps = () => {
-        let {collapsibleHeaderHeight} = this.props;
+        let {collapsibleHeaderHeight, onScroll} = this.props;
 
         return {
             contentContainerStyle: {paddingTop: collapsibleHeaderHeight},
@@ -101,7 +101,7 @@ export default class CollapsibleView extends React.Component {
                         }
                     }
                 ],
-                {useNativeDriver: true}
+                {useNativeDriver: true, listener: onScroll}
             )
         }
     }
